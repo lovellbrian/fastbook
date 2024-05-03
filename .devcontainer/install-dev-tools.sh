@@ -8,11 +8,12 @@ if [ ! -d "$USER_FOLDER" ]; then
   echo -e "Creating the /home/vscode/.local python respository\n" 
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
+  sudo apt-get update
   sudo apt-get install -y libcairo2-dev pkg-config python3-dev
   pip install -r .devcontainer/requirements.txt
 
   # Let's have a user version of python3.
-  cp /usr/local/bin/python3.10 /home/vscode/.local/bin
+  cp /usr/bin/python3.10 /home/vscode/.local/bin
   ln -s /home/vscode/.local/bin/python3.10  /home/vscode/.local/bin/python3
 
   # Version 8 needed for RISE slides. Generates a red compatibility error. 
