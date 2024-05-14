@@ -7,7 +7,7 @@
 
 	"runArgs": [
 		// "--gpus=all",
-		"--shm-size=2g"
+		"--shm-size=16g"
 	  ],
 	  "remoteEnv": {
 		"PATH": "/home/vscode/.local/bin:${containerEnv:PATH}",
