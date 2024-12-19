@@ -13,7 +13,8 @@
 		"PATH": "/home/vscode/.local/bin:${containerEnv:PATH}",
 		"PYTHONPATH": "/home/vscode/.local/bin:${containerEnv:PYTHONPATH}",
 		"LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64",
-		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda"    
+		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
+		"CUDA_MODULE_LOADING=LAZY": "LAZY" 
 	  },
 	  "updateContentCommand": "bash .devcontainer/install-dev-tools.sh",
 	  "customizations": {
