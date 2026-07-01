@@ -1,21 +1,22 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "CPUfrozen",
+	"name": "GPUfrozen",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "lovellbrian/cpu",
+	"image": "lovellbrian/gpu",
 
 	"runArgs": [
-		// "--gpus=all",
+		"--gpus=all", 
 		"--shm-size=16g"
 	  ],
 	  "remoteEnv": {
 		"PATH": "/home/vscode/.local/bin:${containerEnv:PATH}",
 		"PYTHONPATH": "/home/vscode/.local/bin:${containerEnv:PYTHONPATH}",
 		"LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64",
-		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda"    
+		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
+		"CUDA_MODULE_LOADING": "LAZY" 
 	  },
-	  "updateContentCommand": "sudo apt-get update && bash .devcontainer/install-dev-tools.sh",
+	  "updateContentCommand": "bash .devcontainer/install-dev-tools.sh",
 	  "customizations": {
 		"vscode": {
 		  "extensions": [
