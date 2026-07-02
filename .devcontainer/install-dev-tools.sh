@@ -4,7 +4,7 @@
 
 echo
 echo -e "*******************************************************\n"
-echo -e "Creating the /home/vscode/.local python respository\n"
+echo -e "Checking for the /home/vscode/.local python respository\n"
 echo -e "*******************************************************\n" 
 echo 
 
@@ -12,7 +12,11 @@ USER_FOLDER="/home/vscode/.local"
 
 if [ ! -d "$USER_FOLDER" ]; then
   # install python code to ~/.vscode/.local
-  echo " got to here"
+  echo
+  echo -e "*******************************************************\n"
+  echo -e "Creating the /home/vscode/.local python respository\n"
+  echo -e "*******************************************************\n" 
+  echo 
   pip install --upgrade pip
   sudo apt-get update
   sudo apt-get install -y cmake
@@ -28,7 +32,12 @@ if [ ! -d "$USER_FOLDER" ]; then
   # pip install -U ipywidgets==7.8.0
 
   # Put extra packages here
-
+else
+  echo
+  echo -e "*******************************************************\n"
+  echo -e "The /home/vscode/.local python respository already exists\n"
+  echo -e "*******************************************************\n" 
+  echo
 fi
 
 
