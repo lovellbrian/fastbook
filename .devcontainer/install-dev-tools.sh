@@ -10,7 +10,7 @@ echo
 
 USER_FOLDER="/home/vscode/.local"
 
-if [  -d "$USER_FOLDER" ]; then
+if [ ! -d "$USER_FOLDER" ]; then
   # install python code to ~/.vscode/.local
   echo " got to here"
   pip install --upgrade pip
