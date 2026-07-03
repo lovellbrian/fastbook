@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/env bash
 # Put any custom installs in this file
 
 # Put files in USER_FOLDER. Only do this once. 
 
 USER_FOLDER="/home/vscode/.local"
-if [ -d "$USER_FOLDER" ]; then
+if [ "TRUE" ]; then
   echo -e "Creating the /home/vscode/.local python respository\n" 
   echo -e "Installing python3.10 and pip\n"
   # install python code to ~/.vscode/.local
@@ -22,7 +22,7 @@ if [ -d "$USER_FOLDER" ]; then
     # Put extra packages here
 
 else
-echo -e "The /home/vscode/.local python respository is already there\n" 
+  echo -e "The /home/vscode/.local python respository is already there\n" 
 fi
 
 
