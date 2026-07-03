@@ -1,43 +1,30 @@
+#!/bin/bash
 # Put any custom installs in this file
 
 # Put files in USER_FOLDER. Only do this once. 
 
-echo
-echo -e "*******************************************************\n"
-echo -e "Checking for the /home/vscode/.local python respository\n"
-echo -e "*******************************************************\n" 
-echo 
-
 USER_FOLDER="/home/vscode/.local"
-
 if [ ! -d "$USER_FOLDER" ]; then
+echo -e "Creating the /home/vscode/.local python respository\n" 
+ 
   # install python code to ~/.vscode/.local
-  echo
-  echo -e "*******************************************************\n"
-  echo -e "Creating the /home/vscode/.local python respository\n"
-  echo -e "*******************************************************\n" 
-  echo 
   pip install --upgrade pip
   sudo apt-get update
-  sudo apt-get install -y cmake
-  sudo apt-get install -y libcairo2-dev 
-  sudo apt-get install -y libgirepository1.0-dev
-  pip install --break-system-packages -r .devcontainer/requirements.txt
+  sudo apt-get install -y libcairo2-dev pkg-config python3-dev libgirepository1.0-dev
+  pip install -r .devcontainer/requirements.txt
 
   # Let's have a user version of python3.
-  cp /usr/local/bin/python3.10 /home/vscode/.local/bin
+  echo "got to here"
+  cp /usr/local/bin/python3.10 /home/vscode/.local/bin/python3.10
   ln -s /home/vscode/.local/bin/python3.10  /home/vscode/.local/bin/python3
 
   # Version 8 needed for RISE slides. Generates a red compatibility error. 
-  # pip install -U ipywidgets==7.8.0
+  pip install -U ipywidgets==8.0.0
 
   # Put extra packages here
+
 else
-  echo
-  echo -e "*******************************************************\n"
-  echo -e "The /home/vscode/.local python respository already exists\n"
-  echo -e "*******************************************************\n" 
-  echo
+echo -e "The /home/vscode/.local python respository is already there\n" 
 fi
 
 
@@ -46,4 +33,3 @@ fi
 # cd slides
 # jupyter nbconvert birds.ipynb --to slides --post serve
 # Jupyter notebook
-
