@@ -18,10 +18,7 @@ echo -e "Creating the /home/vscode/.local python respository\n"
   cp /usr/local/bin/python3.10 /home/vscode/.local/bin/python3.10
   ln -s /home/vscode/.local/bin/python3.10  /home/vscode/.local/bin/python3
 
-  # Version 8 needed for RISE slides. Generates a red compatibility error. 
-  pip install -U ipywidgets==8.0.0
-
-  # Put extra packages here
+    # Put extra packages here
 
 else
 echo -e "The /home/vscode/.local python respository is already there\n" 
