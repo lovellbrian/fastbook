@@ -4,9 +4,9 @@
 # Put files in USER_FOLDER. Only do this once. 
 
 USER_FOLDER="/home/vscode/.local"
-if [ ! -d "$USER_FOLDER" ]; then
-echo -e "Creating the /home/vscode/.local python respository\n" 
- 
+if [ -d "$USER_FOLDER" ]; then
+  echo -e "Creating the /home/vscode/.local python respository\n" 
+  echo -e "Installing python3.10 and pip\n"
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
   sudo apt-get update
@@ -15,6 +15,7 @@ echo -e "Creating the /home/vscode/.local python respository\n"
 
   # Let's have a user version of python3.
   echo "got to here"
+  echo -e "Copying python3.10 to /home/vscode/.local/bin\n"
   cp /usr/local/bin/python3.10 /home/vscode/.local/bin/python3.10
   ln -s /home/vscode/.local/bin/python3.10  /home/vscode/.local/bin/python3
 
