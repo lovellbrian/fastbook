@@ -12,7 +12,7 @@ USER_FOLDER="/home/vscode/.local"
 if [ ! -d "$USER_FOLDER" ]; then
  
   echo
-  install python code to ~/.vscode/.local
+  # install python code to ~/.vscode/.local
   pip install --upgrade pip
   # sudo apt-get install -y libcairo2-dev 
   pip install --break-system-packages -r .devcontainer/requirements.txt
