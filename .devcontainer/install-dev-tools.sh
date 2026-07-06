@@ -7,8 +7,8 @@ USER_FOLDER="/home/vscode/.local"
 [ ! -d "$USER_FOLDER" ] && echo "Directory missing" || echo "Directory exists"
 # if [ ! -d "$USER_FOLDER" ]; then
   if [ TRUE ]; then
-  echo -e "Creating the /home/vscode/.local python respository\n" 
-  echo -e "Installing python3.10 and pip\n"
+  # echo -e "Creating the /home/vscode/.local python respository\n" 
+  # echo -e "Installing python3.10 and pip\n"
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
   # sudo apt-get update
