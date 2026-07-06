@@ -11,7 +11,7 @@ USER_FOLDER="/home/vscode/.local"
   echo -e "Installing python3.10 and pip\n"
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
-  sudo apt-get update
+  # sudo apt-get update
   # sudo apt-get install -y libcairo2-dev pkg-config python3-dev libgirepository1.0-dev
   pip install -r .devcontainer/requirements.txt
 
