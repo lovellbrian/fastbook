@@ -12,14 +12,14 @@ USER_FOLDER="/home/vscode/.local"
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
   sudo apt-get update
-  sudo apt-get install -y libcairo2-dev pkg-config python3-dev libgirepository1.0-dev
+  # sudo apt-get install -y libcairo2-dev pkg-config python3-dev libgirepository1.0-dev
   pip install -r .devcontainer/requirements.txt
 
   # Let's have a user version of python3.
-  echo "got to here"
-  echo -e "Copying python3.10 to /home/vscode/.local/bin\n"
-  cp /usr/local/bin/python3.10 /home/vscode/.local/bin/python3.10
-  ln -s /home/vscode/.local/bin/python3.10  /home/vscode/.local/bin/python3
+  # echo "got to here"
+  # echo -e "Copying python3.10 to /home/vscode/.local/bin\n"
+  # cp /usr/local/bin/python3.10 /home/vscode/.local/bin/python3.10
+  # ln -s /home/vscode/.local/bin/python3.10  /home/vscode/.local/bin/python3
 
     # Put extra packages here
 
