@@ -16,7 +16,7 @@
 		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
 		"CUDA_MODULE_LOADING": "LAZY" 
 	  },
-	  "updateContentCommand": "bash .devcontainer/install-dev-tools.sh",
+	//   "updateContentCommand": "bash .devcontainer/install-dev-tools.sh",
 	  "customizations": {
 		"vscode": {
 		  "extensions": [
