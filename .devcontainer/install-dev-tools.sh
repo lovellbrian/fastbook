@@ -10,7 +10,9 @@ echo
 # Put files in USER_FOLDER. Only do this once. 
 USER_FOLDER="/home/vscode/.local"
 if [ ! -d "$USER_FOLDER" ]; then
-  echo -e "Creating the $USER_FOLDER python respository\n" 
+  echo -e "*******************************************************\n"
+  echo -e "Creating the /home/vscode/.local python respository\n"
+  echo -e "*******************************************************\n
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
   pip install -r .devcontainer/requirements.txt
