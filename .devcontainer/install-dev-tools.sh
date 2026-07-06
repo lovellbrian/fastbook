@@ -5,9 +5,8 @@
 
 USER_FOLDER="/home/vscode/.local"
 [ ! -d "$USER_FOLDER" ] && echo "Directory missing" || echo "Directory exists"
-# if [ ! -d "$USER_FOLDER" ]; then
-  if [ TRUE ]; then
-  # echo -e "Creating the /home/vscode/.local python respository\n" 
+if [ ! -d "$USER_FOLDER" ]; then
+    # echo -e "Creating the /home/vscode/.local python respository\n" 
   # echo -e "Installing python3.10 and pip\n"
   # install python code to ~/.vscode/.local
   pip install --upgrade pip
@@ -24,6 +23,7 @@ USER_FOLDER="/home/vscode/.local"
     # Put extra packages here
 
 else
+  pip install fastbook
   echo -e "The /home/vscode/.local python respository is already there\n" 
 fi
 
