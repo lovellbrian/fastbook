@@ -4,8 +4,11 @@
 # Put files in USER_FOLDER. Only do this once. 
 
 USER_FOLDER="/home/vscode/.local"
-[ ! -d "$USER_FOLDER" ] && echo "Directory missing" || echo "Directory exists"
+echo -e "****************************************************\n"
+[ ! -d "$USER_FOLDER" ] && echo "$USER_FOLDER Directory missing" || echo "$USER_FOLDER Directory exists"
+echo -e "****************************************************\n"
 if [ ! -d "$USER_FOLDER" ]; then
+    echo
     echo -e "Creating the /home/vscode/.local python respository\n" 
   # echo -e "Installing python3.10 and pip\n"
   # install python code to ~/.vscode/.local
