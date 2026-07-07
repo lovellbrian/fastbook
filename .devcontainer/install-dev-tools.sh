@@ -16,6 +16,8 @@ else
   echo -e "The /home/vscode/.local python respository already exists\n"
   echo -e "*******************************************************\n"
 fi
+# pip install fastbook
+# pip install dtreeviz
 
 
 # Notes:
