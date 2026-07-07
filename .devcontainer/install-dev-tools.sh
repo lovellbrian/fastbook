@@ -5,7 +5,11 @@
 
 USER_FOLDER="/home/vscode/.local"
 echo -e "****************************************************\n"
-[ ! -d "$USER_FOLDER" ] && echo "$USER_FOLDER Directory missing" || echo "$USER_FOLDER Directory exists"
+if [ ! -d "$USER_FOLDER" ]; then
+    echo "$USER_FOLDER Directory missing"
+else
+    echo "$USER_FOLDER Directory exists"
+fi
 echo -e "****************************************************\n"
 if [ ! -d "$USER_FOLDER" ]; then
     echo
@@ -15,8 +19,8 @@ if [ ! -d "$USER_FOLDER" ]; then
   pip install --upgrade pip
   pip install -r .devcontainer/requirements.txt
 else
-  pip install fastbook
   echo -e "The /home/vscode/.local python respository is already there\n" 
+  pip install fastbook
 fi
 
 
