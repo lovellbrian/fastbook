@@ -32,7 +32,7 @@
 		  ]
 		}
 	},
-  "remoteUser": "vscode"   // Specify login user and map to local user on linux
+//   "remoteUser": "vscode"   // Specify login user and map to local user on linux
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
