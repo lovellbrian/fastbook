@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 # Put any custom installs in this file
 
