@@ -9,7 +9,7 @@
 #   # echo -e "Installing python3.10 and pip\n"
 #   # install python code to ~/.vscode/.local
 #   pip install --upgrade pip
-# pip install -r .devcontainer/requirements.txt
+#   pip install -r .devcontainer/requirements.txt
 # else
 #   echo -e "The /home/vscode/.local python respository is already there\n" 
 #   # pip install fastbook
